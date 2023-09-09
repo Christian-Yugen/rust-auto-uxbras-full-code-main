@@ -16,7 +16,7 @@ use models::agents_manager::managing_agent::ManagingAgent;
 
 #[tokio::main]
 async fn main() {
-    let usr_req: String = get_user_response("What website are we building today?");
+    let usr_req: String = get_user_response("Qual website nós vamos contruir hoje?");
 
     let mut manage_agent: ManagingAgent = ManagingAgent::new(usr_req)
         .await

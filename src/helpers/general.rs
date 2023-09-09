@@ -55,13 +55,15 @@ pub async fn ai_task_request(
 
     // Return Success or try again
     match llm_response_res {
-        Ok(llm_resp) => llm_resp,
+        Ok(llm_resp) => {
+            println!("{:?}", llm_resp);
+            llm_resp
+        }
         Err(_) => call_gpt(vec![extended_msg.clone()])
             .await
             .expect("Failed twice to call OpenAI"),
     }
 }
-
 // Performs call to LLM GPT - Decoded
 pub async fn ai_task_request_decoded<T: DeserializeOwned>(
     msg_context: String,
