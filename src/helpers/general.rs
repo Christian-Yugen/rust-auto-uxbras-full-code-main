@@ -6,15 +6,15 @@ use serde::de::DeserializeOwned;
 use std::fs;
 
 const CODE_TEMPLATE_PATH: &str =
-    "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/code_template.rs";
+    "/home/usuario/root_folder/web_server_template_project/src/code_template.rs";
 
-pub const WEB_SERVER_PROJECT_PATH: &str = "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/";
+pub const WEB_SERVER_PROJECT_PATH: &str = "/home/usuario/root_folder/web_server_template_project/";
 
 pub const EXEC_MAIN_PATH: &str =
-    "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/main.rs";
+    "/home/usuario/root_folder/web_server_template_project/src/main.rs";
 
 const API_SCHEMA_PATH: &str =
-    "/Users/shaun/Code/TUTORIALS/rust_autogpt/auto_gippity/schemas/api_schema.json";
+    "/home/usuario/root_folder/auto_gpt_project/schemas/api_schema.json";
 
 // Extend ai function to encourage specific output
 pub fn extend_ai_function(ai_func: fn(&str) -> &'static str, func_input: &str) -> Message {
